@@ -2,6 +2,7 @@ package com.example.h_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     TextView mytextview;
     Button mybutton;
     EditText myinput;
+    Button btSearch;
+    Button search;
 
 
     @Override
@@ -28,6 +31,26 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 countdown1();
+            }
+        });
+
+        btSearch = findViewById(R.id.BtSearch);
+        btSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Test.class);
+                EditText searchinput = findViewById(R.id.searchinput);
+                intent.putExtra("search",String.valueOf(searchinput.getText()));
+                startActivity(intent);
+            }
+        });
+
+        search = findViewById(R.id.search);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),SearchActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -108,6 +131,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         countthread.start();
+
     }
+
 
 }

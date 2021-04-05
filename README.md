@@ -3,8 +3,8 @@
 
 
 
-## 2주차
-> edittext, findViewById를 이용한 UI에서 텍스트 받아오기
+## 3주차
+> listview와 간단한 adapter 이용
 
-> 쓰레드에 대한 개념
-> > UIThread와 다른 Thread들의 쓰임새
+> Intent에 대한 개념
+> > Intent를 이용한 화면 띄우기, 기본 브라우저 앱 띄우기
