@@ -3,8 +3,7 @@
 
 
 
-## 3주차
-> listview와 간단한 adapter 이용
+## 4주차
+> gradle dependency를 이용한 외부 코드 import하여 이용하기
 
-> Intent에 대한 개념
-> > Intent를 이용한 화면 띄우기, 기본 브라우저 앱 띄우기
+> 4주간의 프로젝트 복습

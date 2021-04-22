@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tomer.fadingtextview.FadingTextView;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView mytextview;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     EditText myinput;
     Button btSearch;
     Button search;
+    FadingTextView fadingTextView;
 
 
     @Override
@@ -54,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        String[] texts = {"Hycora","4주차","스터디","입니다~"};
+        fadingTextView = (FadingTextView) findViewById(R.id.openText);
+        fadingTextView.setTexts(texts); //You can use an array resource or a string array as the parameter
+        fadingTextView.setTimeout(1, FadingTextView.SECONDS);
     }
 
 
@@ -124,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        myinput.setText("");
+                        myinput.setText("input num");
                     }
                 });
             }
